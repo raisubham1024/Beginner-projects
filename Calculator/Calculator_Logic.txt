@@ -1,0 +1,16 @@
+let firstValue = Number(prompt("First Input : "))
+let secondValue = Number(prompt("Second Input : "))
+let operator = prompt("Which operation ? ")
+
+function addCal(a, b, operator) {
+  return eval(a + operator + b)
+}
+
+console.log(addCal(firstValue, secondValue, operator))
+
+
+/* missing :
+
+make a fully functional calculator with HTML + CSS + javaScript
+
+/*
