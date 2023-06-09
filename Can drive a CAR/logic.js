@@ -11,13 +11,16 @@ const canDrive = (age) => {
   return `User, ${result} drive a car`
 }
 
-console.log(canDrive(userInput))
-
-//You want to see prompt again ?
-let seeYouagain = confirm("Do you want to input again ?")
-
-while (seeYouagain) {
-  userInput = Number(prompt("What's your age ? "))
+if (userInput > 0) {
   console.log(canDrive(userInput))
-  seeYouagain = confirm("Do you want to input agian ?")
+
+  let seeYouagain = confirm("Do you want to input again ?")
+
+  while (seeYouagain && userInput > 0) {
+    userInput = Number(prompt("What's your age ? "))
+    console.log(canDrive(userInput))
+    seeYouagain = confirm("Do you want to input again ?")
+  }
+} else {
+  console.log(`Please enter valid age`)
 }
