@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout and setInterval</title>
+    <style>
+      #bulb {
+        width: 200px;
+        height: 200px;
+      }
+
+      .bulb-on {
+        background-color: yellow;
+      }
+
+      .bulb-off {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bulb" class="bulb-on"></div>
+    <script>
+      setInterval(function () {
+        document.getElementById("bulb").classList.toggle("bulb-off")
+      }, 10)
+    </script>
+  </body>
+</html>
