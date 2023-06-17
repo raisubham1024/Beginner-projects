@@ -20,14 +20,18 @@
     <script>
       setInterval(function () {
         let a = new Date()
-        //1.
-        document.getElementById("hours").innerHTML = a.getHours()
 
-        //2.
-        document.getElementById("minute").innerHTML = a.getMinutes()
+        // 1. Hours
+        let hours = a.getHours().toString().padStart(2, "0")
+        document.getElementById("hours").innerHTML = hours
 
-        //3.
-        document.getElementById("seconds").innerHTML = a.getSeconds()
+        // 2. Minutes
+        let minutes = a.getMinutes().toString().padStart(2, "0")
+        document.getElementById("minute").innerHTML = minutes
+
+        // 3. Seconds
+        let seconds = a.getSeconds().toString().padStart(2, "0")
+        document.getElementById("seconds").innerHTML = seconds
       }, 1000)
     </script>
   </body>
