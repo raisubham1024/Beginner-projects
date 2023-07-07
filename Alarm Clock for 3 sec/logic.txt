@@ -1,0 +1,16 @@
+let play = document.getElementById("tone")
+console.log(play)
+
+function playMusic() {
+  let audio = new Audio("alerting_tone.mp3")
+
+  audio.addEventListener("timeupdate", function () {
+    if (audio.currentTime >= 3) {
+      audio.pause()
+    }
+  })
+
+  audio.play()
+}
+
+play.addEventListener("click", playMusic)
